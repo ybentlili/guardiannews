@@ -1,0 +1,42 @@
+ext.versions = [
+
+        // Application
+        minSdk                : 21,
+        compileSdk            : 30,
+        versionCode           : 1,
+        versionName           : '1.0',
+        buildToolsVersion     : '30.0.2',
+        // Kotlin
+        core                  : '1.3.2',
+        // UI
+        appCompatVersion      : '1.2.0',
+        supportLibVersion     : '1.2.1',
+        materialDesignVersion : '1.1.0',
+        constraintLayout      : '2.0.4',
+        swipeToRefresh        : '1.0.0',
+        glide                 : '4.11.0',
+        circleImage           : '3.1.0',
+        // Rx
+        rxJavaVersion         : '2.2.9',
+        rxAndroidVersion      : '2.1.1',
+        rxKotlinVersion       : '2.2.0',
+
+        // Networking
+        okHttpVersion         : '4.2.1',
+        okHttpinterceptorVersion : '4.2.1',
+        retrofitVersion       : '2.7.0',
+        gson                  : '2.4.0',
+
+        // Test
+        junitVersion : '4.13',
+        testRunnerVersion : '1.1.1',
+        timberVersion : '4.7.1',
+        assertjVersion : '3.12.2',
+        mockitoVersion : '3.2.4',
+        espresso : '3.3.0',
+
+        // Injection Koin
+        koin_version : "2.1.5",
+        koin_architecture_version : "0.8.2",
+
+]

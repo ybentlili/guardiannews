@@ -1,0 +1,67 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+}
+apply from: '../dependencies.gradle'
+
+android {
+    compileSdkVersion versions.compileSdk
+    buildToolsVersion versions.buildToolsVersion
+
+    defaultConfig {
+        applicationId "com.test.guardiannews"
+        minSdkVersion versions.minSdk
+        targetSdkVersion versions.compileSdk
+        versionCode versions.versionCode
+        versionName versions.versionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    viewBinding {
+        enabled = true
+    }
+}
+
+dependencies {
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation "androidx.core:core-ktx:$versions.core"
+    implementation "androidx.appcompat:appcompat:$versions.appCompatVersion"
+    implementation "com.google.android.material:material:$versions.materialDesignVersion"
+    implementation "androidx.constraintlayout:constraintlayout:$versions.constraintLayout"
+    implementation project(path: ':domain')
+    implementation project(path: ':data')
+
+    implementation "io.reactivex.rxjava2:rxandroid:$versions.rxAndroidVersion"
+
+    //Koin
+    implementation "org.koin:koin-androidx-scope:$versions.koin_version"
+    implementation "org.koin:koin-androidx-viewmodel:$versions.koin_version"
+    implementation "org.koin:koin-androidx-fragment:$versions.koin_version"
+    implementation "org.koin:koin-androidx-ext:$versions.koin_version"
+
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:$versions.swipeToRefresh"
+
+    implementation "com.github.bumptech.glide:glide:$versions.glide"
+    annotationProcessor "com.github.bumptech.glide:compiler:$versions.glide"
+
+    // lib to display circle image
+    implementation "de.hdodenhof:circleimageview:$versions.circleImage"
+
+    //Testing
+    testImplementation "junit:junit:$versions.junitVersion"
+}

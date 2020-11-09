@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="@dimen/padding_content"
+    android:id="@+id/cv_child_root">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="@dimen/size_img"
+        android:layout_height="@dimen/size_img"
+        app:civ_border_width="2dp"
+        android:id="@+id/iv_thumb"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:civ_border_color="@color/purple_200"/>
+    <TextView
+
+        android:id="@+id/tv_title_news"
+        android:layout_marginLeft="@dimen/margin"
+        app:layout_constraintStart_toEndOf="@id/iv_thumb"
+        app:layout_constraintTop_toTopOf="parent"
+        android:maxLines="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:ellipsize="end"
+        style="@style/titleArticle"
+        tools:text ="Title Texbgfbgfbghbhgnhg hjhfgv fvjh jhfjed dfvkjf kvjf t"
+        />
+
+    <TextView
+        style="@style/dateArticle"
+        android:id="@+id/tv_date_news"
+        android:layout_marginLeft="@dimen/margin"
+        app:layout_constraintStart_toEndOf="@+id/iv_thumb"
+        app:layout_constraintTop_toBottomOf="@id/tv_title_news"
+        tools:text="Date"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
