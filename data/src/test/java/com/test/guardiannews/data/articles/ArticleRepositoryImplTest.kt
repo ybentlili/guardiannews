@@ -23,7 +23,6 @@ class ArticleRepositoryImplTest : TestCase() {
     private val networkDataSource = Mockito.mock(NetworkDataSource::class.java)
     private val apiKey : String = "b910f9e7-183e-4041-893c-76456b317c44"
     private val showFieldDetails : String = "main,body,headline,thumbnail"
-    private val query  : String = "football"
     private lateinit var articleRepositoryImpl : ArticleRepositoryImpl
 
     private val fieldDetailArticle = FieldDetailsArticle("headline","main","body","thumbnail")

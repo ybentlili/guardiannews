@@ -25,7 +25,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:ellipsize="end"
         style="@style/titleArticle"
-        tools:text ="Title Texbgfbgfbghbhgnhg hjhfgv fvjh jhfjed dfvkjf kvjf t"
+        tools:text ="Title"
         />
 
     <TextView

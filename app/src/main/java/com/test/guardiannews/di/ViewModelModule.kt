@@ -3,7 +3,6 @@ package com.test.guardiannews.di
 import com.test.guardiannews.ui.articles.ListArticleViewModel
 import com.test.guardiannews.ui.details.ArticleDetailsViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
-import org.koin.core.context.KoinContextHandler.get
 import org.koin.dsl.module
 
 

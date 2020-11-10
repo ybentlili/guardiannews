@@ -1,14 +1,11 @@
 <resources>
 
     <!--Details Article-->
-    <dimen name="app_bar_height">180dp</dimen>
-    <dimen name="bottom_content">20dp</dimen>
     <dimen name="padding_content">15dp</dimen>
     <dimen name="title_main_size">18sp</dimen>
     <dimen name="headline_size">22sp</dimen>
     <dimen name="content_size">16sp</dimen>
     <dimen name="margin">10dp</dimen>
-    <dimen name="progress">90dp</dimen>
 
     <!--List Articles-->
     <dimen name="size_img">80dp</dimen>

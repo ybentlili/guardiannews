@@ -43,7 +43,7 @@ class DetailsArticleActivity : AppCompatActivity() , ViewRender<ArticleDetailsPa
 
     override fun render(state: ArticleDetailsPartialState) {
         when(state){
-            is ArticleDetailsPartialState.ArticleDetailsSuccessufly -> {
+            is ArticleDetailsPartialState.ArticleDetailsSuccessfully -> {
                 binding?.tvLoadingData?.visibility = View.GONE
                 Glide.with(this).load(state.detailArticle.urlImage).into(binding?.ivArticle!!)
                 if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
@@ -53,8 +53,8 @@ class DetailsArticleActivity : AppCompatActivity() , ViewRender<ArticleDetailsPa
                     binding?.tvContentArticle?.movementMethod  = android.text.method.LinkMovementMethod.getInstance()
                 } else {
                    binding?.tvContentArticle?.text = (Html.fromHtml(state.detailArticle.filedBody))
-                    binding?.tvMainArticle?.text = (Html.fromHtml(state.detailArticle.filedMain));
-                    binding?.tvHeadlineArticle?.text = (Html.fromHtml(state.detailArticle.filedHeadline));
+                    binding?.tvMainArticle?.text = (Html.fromHtml(state.detailArticle.filedMain))
+                    binding?.tvHeadlineArticle?.text = (Html.fromHtml(state.detailArticle.filedHeadline))
                     binding?.tvContentArticle?.movementMethod  = android.text.method.LinkMovementMethod.getInstance()
                 }
                 binding?.tvDateArticle?.text = state.detailArticle.publishDate?.getTimeFromBasicFormat()

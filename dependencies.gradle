@@ -11,9 +11,9 @@ ext.versions = [
         // UI
         appCompatVersion      : '1.2.0',
         supportLibVersion     : '1.2.1',
-        materialDesignVersion : '1.1.0',
+        materialDesignVersion : '1.2.1',
         constraintLayout      : '2.0.4',
-        swipeToRefresh        : '1.0.0',
+        swipeToRefresh        : '1.1.0',
         glide                 : '4.11.0',
         circleImage           : '3.1.0',
         // Rx
@@ -28,7 +28,7 @@ ext.versions = [
         gson                  : '2.4.0',
 
         // Test
-        junitVersion : '4.13',
+        junitVersion : '4.13.1',
         testRunnerVersion : '1.1.1',
         timberVersion : '4.7.1',
         assertjVersion : '3.12.2',

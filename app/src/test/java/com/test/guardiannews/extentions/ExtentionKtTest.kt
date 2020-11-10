@@ -10,13 +10,13 @@ class ExtentionKtTest : TestCase() {
     private val hoursFormat : String = "04:10 PM"
     @Test
     fun testGetDateFromBasicFormat() {
-        var result = date.getDateFromBasicFormat() ;
+        var result = date.getDateFromBasicFormat()
         assertEquals(result,resultFormatDate)
     }
 
     @Test
     fun testGetTimeFromBasicFormat() {
-        var result = date.getTimeFromBasicFormat() ;
+        var result = date.getTimeFromBasicFormat()
         assertEquals(result,hoursFormat)
     }
 }

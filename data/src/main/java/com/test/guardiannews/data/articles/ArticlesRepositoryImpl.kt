@@ -19,7 +19,7 @@ class ArticlesRepositoryImpl(private val networkDataSource: NetworkDataSource) :
                     total =  it.response.total,
                     numberPage = it.response.pages,
                     listArticle = it.response.listNews.map {
-                        Article(id = it?.id,
+                        Article(id = it.id,
                                 sectionName = it.sectionName,
                                 title = it.webTitle,
                                 publishDate = it.webPublicationDate,

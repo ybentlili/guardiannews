@@ -31,7 +31,7 @@ class ListArticlesActivity : AppCompatActivity() , ViewRender<ArticlesPartialSta
     }
 
     /**
-     * Init View Modell
+     * Init View Model
      */
     private fun initViewModel() {
         listArticleViewModel.dispatchIntent(
@@ -44,7 +44,7 @@ class ListArticlesActivity : AppCompatActivity() , ViewRender<ArticlesPartialSta
     }
 
     /**
-     * Init Dislay View
+     * Init Display View
      */
     private fun initView() {
         with(binding?.rvListNews){
@@ -79,19 +79,19 @@ class ListArticlesActivity : AppCompatActivity() , ViewRender<ArticlesPartialSta
     override fun render(state: ArticlesPartialState) {
         when(state){
             is ArticlesPartialState.ListArticlesLoading -> {
-                Log.i("TAG", "Appli is loading")
+                Log.i("TAG", "Application is loading")
                 binding?.swToRListNews?.isRefreshing = state.isLoading
                 binding?.rvListNews?.visibility = View.GONE
             }
-            is ArticlesPartialState.ListArticlesSuccessufly -> {
-                Log.i("TAG", "Appli is loading : ${state.list.listArticle.size}")
-                listArticlesAdapter?.updateData(state.list.listArticle)
+            is ArticlesPartialState.ListArticlesSuccessfully -> {
+                Log.i("TAG", "Application is loading : ${state.list.listArticle.size}")
+                listArticlesAdapter.updateData(state.list.listArticle)
                 binding?.swToRListNews?.isRefreshing = state.isLoading
                 binding?.rvListNews?.visibility = View.VISIBLE
                 listArticleViewModel.dispatchIntent(ArticlesIntent.NotifyGetListArticlesExecuted)
             }
             is ArticlesPartialState.ListArticlesError -> {
-                Log.i("TAG","Appli error : ${state.message}")
+                Log.i("TAG","Application error : ${state.message}")
                 binding?.swToRListNews?.isRefreshing = false
                 binding?.rvListNews?.visibility = View.GONE
                 Snackbar.make(binding?.clRoot as View, resources.getString(R.string.error), Snackbar.LENGTH_SHORT)
@@ -99,7 +99,7 @@ class ListArticlesActivity : AppCompatActivity() , ViewRender<ArticlesPartialSta
                 listArticleViewModel.dispatchIntent(ArticlesIntent.NotifyGetListArticlesExecuted)
             }
             is ArticlesPartialState.EventListArticlesConsumed -> {
-                Log.i("TAG","Load is finish")
+                Log.i("TAG","Load data is finish")
             }
         }
 

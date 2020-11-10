@@ -2,9 +2,7 @@ package com.test.guardiannews.ui.details
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.test.guadiannews.domain.article.ArticleRepository
 import com.test.guadiannews.domain.article.ArticleUseCase
-import com.test.guadiannews.domain.articles.ArticlesUseCase
 import com.test.guardiannews.base.IModel
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
@@ -38,7 +36,7 @@ class ArticleDetailsViewModel(private val articleUseCase: ArticleUseCase) : View
                         .subscribeOn(Schedulers.io())
                         .subscribe(
                             {
-                                state.postValue(ArticleDetailsPartialState.ArticleDetailsSuccessufly(it))
+                                state.postValue(ArticleDetailsPartialState.ArticleDetailsSuccessfully(it))
                             },
                             {
                                 state.postValue(ArticleDetailsPartialState.GetArticleDetailsError(it.message))

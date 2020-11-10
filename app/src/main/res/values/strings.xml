@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">The Guardian</string>
     <string name="error">An error is occurred, please check your connection and try again</string>
-    <string name="laoding_data">Loading data, please wait...</string>
+    <string name="loading_data">Loading data, please wait</string>
 </resources>

@@ -5,19 +5,14 @@ import com.test.guadiannews.domain.model.ListArticle
 
 sealed class ArticlesPartialState {
 
-    data class ListArticlesSuccessufly(val list : ListArticle) : ArticlesPartialState() {
+    data class ListArticlesSuccessfully(val list : ListArticle) : ArticlesPartialState() {
         val isLoading = false
-        val isError = false
     }
 
     data class ListArticlesLoading (val isLoading : Boolean , val isError : Boolean): ArticlesPartialState() {
         val articles = null
     }
 
-    data class ListArticlesError(val message: String?) : ArticlesPartialState() {
-        val isLoading = false
-        val isError = true
-        val event = message
-    }
+    data class ListArticlesError(val message: String?) : ArticlesPartialState() {}
     object EventListArticlesConsumed : ArticlesPartialState()
 }

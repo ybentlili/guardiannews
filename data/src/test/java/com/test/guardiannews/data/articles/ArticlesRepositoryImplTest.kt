@@ -24,7 +24,6 @@ class ArticlesRepositoryImplTest {
     private val apiKey : String = "b910f9e7-183e-4041-893c-76456b317c44"
 
     private val showField : String = "headline,thumbnail"
-    private val showFieldDetails : String = "main,body,headline,thumbnail"
     private val pageSize  : Int = 50
     private val query  : String = "football"
     private lateinit var articlesRepositoryImpl : ArticlesRepositoryImpl

@@ -6,9 +6,7 @@ import com.test.guadiannews.domain.utils.TestException
 import io.reactivex.Observable
 import io.reactivex.observers.TestObserver
 import org.assertj.core.api.Assertions
-import org.hamcrest.core.Is.`is`
 import org.junit.Assert
-import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.mockito.Mockito

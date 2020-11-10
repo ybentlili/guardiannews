@@ -36,7 +36,7 @@ class ListArticleViewModel(private val articlesUseCase: ArticlesUseCase) : ViewM
                         .subscribeOn(Schedulers.io())
                         .subscribe(
                             {
-                                state.postValue(ArticlesPartialState.ListArticlesSuccessufly(it))
+                                state.postValue(ArticlesPartialState.ListArticlesSuccessfully(it))
                             },
                             {
                                 state.postValue(ArticlesPartialState.ListArticlesError(it.message))

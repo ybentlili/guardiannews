@@ -20,13 +20,13 @@ open class OkHttpClientFactory {
         OkHttpClient.Builder()
             .apply {
                 if (BuildConfig.DEBUG) {
-                    enableDebugTools(context)
+                    enableDebugTools()
                 }
                 updateTimeout()
             }
             .build()
 
-    private fun OkHttpClient.Builder.enableDebugTools(context: Context) {
+    private fun OkHttpClient.Builder.enableDebugTools() {
         addInterceptor(provideInterceptLogging())
     }
     open fun provideGuardianAPIWs(retrofit: Retrofit): GuardianNetworkAPI =

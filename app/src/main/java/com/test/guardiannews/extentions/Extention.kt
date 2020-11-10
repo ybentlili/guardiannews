@@ -8,8 +8,8 @@ import java.util.*
  *  Get format date from standard to app
  */
 fun String.getDateFromBasicFormat(): String {
-    val parser = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'")
-    val formatter = SimpleDateFormat("dd/MM/yyyy")
+    val parser = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'", Locale.getDefault())
+    val formatter = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault())
     return formatter.format(parser.parse(this))
 }
 
@@ -18,6 +18,6 @@ fun String.getDateFromBasicFormat(): String {
  */
 fun String.getTimeFromBasicFormat(): String {
     val parser = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'", Locale.getDefault())
-    val formatter = SimpleDateFormat("hh:mm aa")
+    val formatter = SimpleDateFormat("hh:mm aa", Locale.getDefault())
     return formatter.format(parser.parse(this))
 }

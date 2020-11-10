@@ -1,7 +1,6 @@
 package com.test.guardiannews.data.net
 
 import android.content.Context
-import com.test.guardiannews.data.net.OkHttpClientFactory
 import okhttp3.OkHttpClient
 
 
