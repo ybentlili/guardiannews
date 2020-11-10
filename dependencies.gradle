@@ -33,7 +33,8 @@ ext.versions = [
         timberVersion : '4.7.1',
         assertjVersion : '3.12.2',
         mockitoVersion : '3.2.4',
-        espresso : '3.3.0',
+        espresso : '3.4.0-alpha02',
+        testRules: '1.3.1-alpha02',
 
         // Injection Koin
         koin_version : "2.1.5",

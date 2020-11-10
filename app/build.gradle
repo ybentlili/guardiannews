@@ -59,6 +59,11 @@ dependencies {
     implementation "com.github.bumptech.glide:glide:$versions.glide"
     annotationProcessor "com.github.bumptech.glide:compiler:$versions.glide"
 
+    androidTestImplementation "androidx.test.espresso:espresso-core:$versions.espresso"
+    androidTestImplementation "androidx.test:rules:$versions.testRules"
+    androidTestImplementation "androidx.test.espresso:espresso-contrib:$versions.espresso"
+
+
     // lib to display circle image
     implementation "de.hdodenhof:circleimageview:$versions.circleImage"
 

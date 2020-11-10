@@ -13,6 +13,6 @@ sealed class ArticlesPartialState {
         val articles = null
     }
 
-    data class ListArticlesError(val message: String?) : ArticlesPartialState() {}
+    data class ListArticlesError(val message: String?) : ArticlesPartialState()
     object EventListArticlesConsumed : ArticlesPartialState()
 }
